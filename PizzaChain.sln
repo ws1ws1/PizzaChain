@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaChain.CatalogApi", "src\PizzaChain.CatalogApi\PizzaChain.CatalogApi.csproj", "{A306CD67-20EB-57BF-7632-AB81AE909255}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaChain.OrderApi", "src\PizzaChain.OrderApi\PizzaChain.OrderApi.csproj", "{F073C46E-3526-EB81-9829-A29981CFF12D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{A306CD67-20EB-57BF-7632-AB81AE909255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A306CD67-20EB-57BF-7632-AB81AE909255}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A306CD67-20EB-57BF-7632-AB81AE909255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F073C46E-3526-EB81-9829-A29981CFF12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F073C46E-3526-EB81-9829-A29981CFF12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F073C46E-3526-EB81-9829-A29981CFF12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F073C46E-3526-EB81-9829-A29981CFF12D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A306CD67-20EB-57BF-7632-AB81AE909255} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F073C46E-3526-EB81-9829-A29981CFF12D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DA25894-4BB2-495B-A246-883DA42E1B17}
