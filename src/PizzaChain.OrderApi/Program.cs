@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using PizzaChain.CatalogApi.Data;
-using PizzaChain.CatalogApi.Data.Repositories;
+using PizzaChain.OrderApi.Data;
+using PizzaChain.OrderApi.Data.Repositories;
+using PizzaChain.OrderApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,20 +14,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreConnection")));
 
-builder.Services.AddScoped<IDishRepository, DishRepository>();
-/*
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        builder =>
-        {
-            builder.AllowAnyMethod()
-                   .AllowAnyHeader()
-                   .SetIsOriginAllowed(origin => true)
-                   .AllowCredentials();
-        });
-});
-*/
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+builder.Services.AddHttpClient<IDishService, DishService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -41,8 +33,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-//app.UseCors("AllowAll");
 
 // Initialize database and apply migrations
 using (var scope = app.Services.CreateScope())
